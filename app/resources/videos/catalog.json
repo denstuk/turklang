@@ -1,0 +1,92 @@
+[
+  {
+    "id": "vid_001",
+    "title": "Learn Turkish in 25 Minutes - ALL the Basics You Need",
+    "youtubeId": "uIBLKpknYDo",
+    "category": "basics",
+    "difficulty": "beginner",
+    "description": "A comprehensive introduction to Turkish basics including greetings, numbers, and essential phrases",
+    "duration": "25:00"
+  },
+  {
+    "id": "vid_002",
+    "title": "Turkish Alphabet & Pronunciation Guide",
+    "youtubeId": "bPqB9faYEOs",
+    "category": "alphabet",
+    "difficulty": "beginner",
+    "description": "Master the Turkish alphabet with correct pronunciation for all 29 letters",
+    "duration": "15:42"
+  },
+  {
+    "id": "vid_003",
+    "title": "100 Phrases Every Turkish Beginner Must Know",
+    "youtubeId": "2hBJkSyT-mg",
+    "category": "phrases",
+    "difficulty": "beginner",
+    "description": "Essential Turkish phrases for everyday conversation",
+    "duration": "30:15"
+  },
+  {
+    "id": "vid_004",
+    "title": "Turkish Vowel Harmony Explained Simply",
+    "youtubeId": "lO8v4GkBLpw",
+    "category": "grammar",
+    "difficulty": "beginner",
+    "description": "Understanding the fundamental rule of Turkish grammar - vowel harmony",
+    "duration": "12:30"
+  },
+  {
+    "id": "vid_005",
+    "title": "Turkish Present Tense - yor Tense",
+    "youtubeId": "MxaZVKbmevo",
+    "category": "grammar",
+    "difficulty": "beginner",
+    "description": "Learn to conjugate verbs in the present continuous tense",
+    "duration": "18:45"
+  },
+  {
+    "id": "vid_006",
+    "title": "Turkish Past Tense Made Easy",
+    "youtubeId": "PaQOEHjqr_A",
+    "category": "grammar",
+    "difficulty": "intermediate",
+    "description": "Master the Turkish past tense with clear examples and practice",
+    "duration": "20:10"
+  },
+  {
+    "id": "vid_007",
+    "title": "Turkish Numbers 1-100",
+    "youtubeId": "V1t-UGzRqjY",
+    "category": "numbers",
+    "difficulty": "beginner",
+    "description": "Learn to count in Turkish from 1 to 100",
+    "duration": "10:22"
+  },
+  {
+    "id": "vid_008",
+    "title": "Ordering Food in Turkish - Restaurant Conversations",
+    "youtubeId": "SXxYtKGZkwA",
+    "category": "conversation",
+    "difficulty": "intermediate",
+    "description": "Practical Turkish for ordering at restaurants and cafes",
+    "duration": "14:55"
+  },
+  {
+    "id": "vid_009",
+    "title": "Turkish Suffixes - A Complete Guide",
+    "youtubeId": "9kzK6hFI38M",
+    "category": "grammar",
+    "difficulty": "intermediate",
+    "description": "Understanding the suffix system that makes Turkish unique",
+    "duration": "22:30"
+  },
+  {
+    "id": "vid_010",
+    "title": "Daily Routine in Turkish - Useful Verbs",
+    "youtubeId": "4-Z3dWpvEh4",
+    "category": "vocabulary",
+    "difficulty": "beginner",
+    "description": "Learn vocabulary for describing your daily activities in Turkish",
+    "duration": "16:40"
+  }
+]

@@ -1,0 +1,26 @@
+appId: com.turklang.app
+productName: Turklang
+directories:
+  buildResources: resources
+  output: dist
+mac:
+  category: public.app-category.education
+  target:
+    - dmg
+    - zip
+  artifactName: Turklang-${version}-${arch}.${ext}
+dmg:
+  contents:
+    - x: 130
+      y: 220
+    - x: 410
+      y: 220
+      type: link
+      path: /Applications
+extraResources:
+  - from: resources/words.json
+    to: words.json
+  - from: resources/grammar
+    to: grammar
+  - from: resources/videos
+    to: videos

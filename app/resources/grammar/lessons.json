@@ -1,0 +1,447 @@
+[
+  {
+    "id": "alphabet",
+    "title": "Turkish Alphabet & Pronunciation",
+    "description": "Learn the 29 letters of the Turkish alphabet and their sounds",
+    "difficulty": "beginner",
+    "sections": [
+      {
+        "type": "explanation",
+        "content": "Turkish uses a Latin-based alphabet with 29 letters. Most are pronounced as in English, but several special characters have unique sounds."
+      },
+      {
+        "type": "table",
+        "content": "Special Turkish Characters",
+        "table": {
+          "headers": ["Letter", "Sound", "Example"],
+          "rows": [
+            ["Cc", "j as in jump", "cam (glass) = jam"],
+            ["Çç", "ch as in church", "çay (tea) = chai"],
+            ["Ğğ", "silent, lengthens vowel", "dağ (mountain) = daa"],
+            ["Iı", "uh as in about", "ılık (warm) = uhluhk"],
+            ["İi", "ee as in feet", "bir (one) = beer"],
+            ["Öö", "ur as in burn", "göz (eye) = gurz"],
+            ["Şş", "sh as in shoe", "şeker (sugar) = sheker"],
+            ["Üü", "ew as in few", "gül (rose) = gewl"]
+          ]
+        }
+      },
+      {
+        "type": "explanation",
+        "content": "Turkish is phonetically consistent — each letter always makes the same sound. Once you learn the alphabet, you can read any Turkish word correctly!"
+      }
+    ],
+    "exercises": [
+      {
+        "type": "fill_blank",
+        "sentence": "The letter 'ç' sounds like ___ in English",
+        "answer": "ch",
+        "alternatives": ["CH"],
+        "hint": "Think of 'church'"
+      },
+      {
+        "type": "fill_blank",
+        "sentence": "The letter 'ş' sounds like ___ in English",
+        "answer": "sh",
+        "alternatives": ["SH"],
+        "hint": "Think of 'shoe'"
+      },
+      {
+        "type": "fill_blank",
+        "sentence": "The letter 'c' in Turkish sounds like ___ in English",
+        "answer": "j",
+        "alternatives": ["J"],
+        "hint": "Think of 'jump'"
+      }
+    ]
+  },
+  {
+    "id": "vowel-harmony",
+    "title": "Vowel Harmony",
+    "description": "Understand the fundamental rule that governs Turkish suffixes",
+    "difficulty": "beginner",
+    "sections": [
+      {
+        "type": "explanation",
+        "content": "Vowel harmony is the most important rule in Turkish grammar. Suffixes change their vowels to match the last vowel of the root word."
+      },
+      {
+        "type": "table",
+        "content": "Turkish Vowel Groups",
+        "table": {
+          "headers": ["Type", "Back Vowels", "Front Vowels"],
+          "rows": [
+            ["Unrounded", "a, ı", "e, i"],
+            ["Rounded", "o, u", "ö, ü"]
+          ]
+        }
+      },
+      {
+        "type": "explanation",
+        "content": "Two-way harmony (e/a): After back vowels (a, ı, o, u) use 'a'. After front vowels (e, i, ö, ü) use 'e'. Example: evler (houses) vs odalar (rooms)."
+      },
+      {
+        "type": "explanation",
+        "content": "Four-way harmony (i/ı/u/ü): The suffix vowel matches both frontness and roundedness. After a→ı, after e→i, after o→u, after ö→ü."
+      }
+    ],
+    "exercises": [
+      {
+        "type": "fill_blank",
+        "sentence": "ev + ler/lar → ev___",
+        "answer": "ler",
+        "hint": "'e' is a front vowel, so use 'ler'"
+      },
+      {
+        "type": "fill_blank",
+        "sentence": "oda + ler/lar → oda___",
+        "answer": "lar",
+        "hint": "'a' is a back vowel, so use 'lar'"
+      },
+      {
+        "type": "fill_blank",
+        "sentence": "göz + ler/lar → göz___",
+        "answer": "ler",
+        "hint": "'ö' is a front vowel, so use 'ler'"
+      },
+      {
+        "type": "fill_blank",
+        "sentence": "kuş + ler/lar → kuş___",
+        "answer": "lar",
+        "hint": "'u' is a back vowel, so use 'lar'"
+      }
+    ]
+  },
+  {
+    "id": "plurals",
+    "title": "Plural Suffix -ler / -lar",
+    "description": "Learn how to make Turkish nouns plural",
+    "difficulty": "beginner",
+    "sections": [
+      {
+        "type": "explanation",
+        "content": "Turkish plurals are simple: add -ler after front vowels (e, i, ö, ü) and -lar after back vowels (a, ı, o, u)."
+      },
+      {
+        "type": "example",
+        "content": "Examples of plural formation",
+        "examples": [
+          { "tr": "ev → evler", "en": "house → houses" },
+          { "tr": "araba → arabalar", "en": "car → cars" },
+          { "tr": "göz → gözler", "en": "eye → eyes" },
+          { "tr": "kuş → kuşlar", "en": "bird → birds" }
+        ]
+      }
+    ],
+    "exercises": [
+      {
+        "type": "fill_blank",
+        "sentence": "kitap → kitap___",
+        "answer": "lar",
+        "hint": "Last vowel 'a' is a back vowel"
+      },
+      {
+        "type": "fill_blank",
+        "sentence": "kedi → kedi___",
+        "answer": "ler",
+        "hint": "Last vowel 'i' is a front vowel"
+      },
+      {
+        "type": "sentence_build",
+        "english": "The cats are small",
+        "words": ["küçük", "kediler"],
+        "correctOrder": ["kediler", "küçük"]
+      },
+      {
+        "type": "sentence_build",
+        "english": "The houses are big",
+        "words": ["büyük", "evler"],
+        "correctOrder": ["evler", "büyük"]
+      }
+    ]
+  },
+  {
+    "id": "present-continuous",
+    "title": "Present Continuous Tense (-yor)",
+    "description": "Learn to express actions happening right now",
+    "difficulty": "beginner",
+    "sections": [
+      {
+        "type": "explanation",
+        "content": "The present continuous tense is formed by adding -yor to the verb stem, followed by personal suffixes. The vowel before -yor follows 4-way harmony (ı/i/u/ü)."
+      },
+      {
+        "type": "table",
+        "content": "Conjugation of 'gelmek' (to come)",
+        "table": {
+          "headers": ["Pronoun", "Turkish", "English"],
+          "rows": [
+            ["Ben", "geliyorum", "I am coming"],
+            ["Sen", "geliyorsun", "You are coming"],
+            ["O", "geliyor", "He/she is coming"],
+            ["Biz", "geliyoruz", "We are coming"],
+            ["Siz", "geliyorsunuz", "You (pl) are coming"],
+            ["Onlar", "geliyorlar", "They are coming"]
+          ]
+        }
+      },
+      {
+        "type": "explanation",
+        "content": "If the verb stem ends in a vowel, drop it before adding -yor. Example: bekle-mek → bekl-iyor (is waiting)."
+      }
+    ],
+    "exercises": [
+      {
+        "type": "conjugation",
+        "verb": "gitmek (to go)",
+        "tense": "Present Continuous",
+        "pronouns": ["Ben", "Sen", "O", "Biz", "Siz", "Onlar"],
+        "answers": {
+          "Ben": "gidiyorum",
+          "Sen": "gidiyorsun",
+          "O": "gidiyor",
+          "Biz": "gidiyoruz",
+          "Siz": "gidiyorsunuz",
+          "Onlar": "gidiyorlar"
+        }
+      },
+      {
+        "type": "fill_blank",
+        "sentence": "Ben okula ___",
+        "answer": "gidiyorum",
+        "hint": "I am going to school"
+      },
+      {
+        "type": "fill_blank",
+        "sentence": "O kitap ___",
+        "answer": "okuyor",
+        "hint": "He/she is reading a book"
+      }
+    ]
+  },
+  {
+    "id": "questions",
+    "title": "Question Formation (mı/mi/mu/mü)",
+    "description": "Learn to ask yes/no questions in Turkish",
+    "difficulty": "beginner",
+    "sections": [
+      {
+        "type": "explanation",
+        "content": "Yes/no questions are formed by adding the question particle mı/mi/mu/mü after the word being questioned. It follows 4-way vowel harmony."
+      },
+      {
+        "type": "table",
+        "content": "Question particle selection",
+        "table": {
+          "headers": ["Last Vowel", "Particle", "Example"],
+          "rows": [
+            ["a, ı", "mı", "güzel mi? → Is it beautiful?"],
+            ["e, i", "mi", "iyi mi? → Is it good?"],
+            ["o, u", "mu", "bu mu? → Is this?"],
+            ["ö, ü", "mü", "gül mü? → Is it a rose?"]
+          ]
+        }
+      },
+      {
+        "type": "example",
+        "content": "Question examples",
+        "examples": [
+          { "tr": "Sen Türk müsün?", "en": "Are you Turkish?" },
+          { "tr": "Bu kitap mı?", "en": "Is this a book?" },
+          { "tr": "Geliyor musun?", "en": "Are you coming?" }
+        ]
+      }
+    ],
+    "exercises": [
+      {
+        "type": "fill_blank",
+        "sentence": "Bu güzel ___?",
+        "answer": "mi",
+        "hint": "Last vowel of 'güzel' is 'e' → mi"
+      },
+      {
+        "type": "fill_blank",
+        "sentence": "O bir doktor ___?",
+        "answer": "mu",
+        "hint": "Last vowel of 'doktor' is 'o' → mu"
+      },
+      {
+        "type": "sentence_build",
+        "english": "Is this a cat?",
+        "words": ["mi", "bir", "bu", "kedi"],
+        "correctOrder": ["bu", "bir", "kedi", "mi"]
+      }
+    ]
+  },
+  {
+    "id": "past-tense",
+    "title": "Past Tense (-di / -dı)",
+    "description": "Express completed actions in the past",
+    "difficulty": "intermediate",
+    "sections": [
+      {
+        "type": "explanation",
+        "content": "The definite past tense (witnessed past) uses -di/-dı/-du/-dü suffixes. After voiceless consonants (ç, f, h, k, p, s, ş, t), use -ti/-tı/-tu/-tü instead."
+      },
+      {
+        "type": "table",
+        "content": "Conjugation of 'gelmek' (to come) - Past Tense",
+        "table": {
+          "headers": ["Pronoun", "Turkish", "English"],
+          "rows": [
+            ["Ben", "geldim", "I came"],
+            ["Sen", "geldin", "You came"],
+            ["O", "geldi", "He/she came"],
+            ["Biz", "geldik", "We came"],
+            ["Siz", "geldiniz", "You (pl) came"],
+            ["Onlar", "geldiler", "They came"]
+          ]
+        }
+      }
+    ],
+    "exercises": [
+      {
+        "type": "conjugation",
+        "verb": "yapmak (to do/make)",
+        "tense": "Past Tense",
+        "pronouns": ["Ben", "Sen", "O", "Biz", "Siz", "Onlar"],
+        "answers": {
+          "Ben": "yaptım",
+          "Sen": "yaptın",
+          "O": "yaptı",
+          "Biz": "yaptık",
+          "Siz": "yaptınız",
+          "Onlar": "yaptılar"
+        }
+      },
+      {
+        "type": "fill_blank",
+        "sentence": "Dün okula ___",
+        "answer": "gittim",
+        "hint": "I went to school yesterday (ben)"
+      },
+      {
+        "type": "sentence_build",
+        "english": "She ate the apple",
+        "words": ["yedi", "elmayı", "o"],
+        "correctOrder": ["o", "elmayı", "yedi"]
+      }
+    ]
+  },
+  {
+    "id": "future-tense",
+    "title": "Future Tense (-ecek / -acak)",
+    "description": "Talk about future actions and plans",
+    "difficulty": "intermediate",
+    "sections": [
+      {
+        "type": "explanation",
+        "content": "The future tense uses -ecek (after front vowels) or -acak (after back vowels), followed by personal suffixes."
+      },
+      {
+        "type": "table",
+        "content": "Conjugation of 'gelmek' (to come) - Future Tense",
+        "table": {
+          "headers": ["Pronoun", "Turkish", "English"],
+          "rows": [
+            ["Ben", "geleceğim", "I will come"],
+            ["Sen", "geleceksin", "You will come"],
+            ["O", "gelecek", "He/she will come"],
+            ["Biz", "geleceğiz", "We will come"],
+            ["Siz", "geleceksiniz", "You (pl) will come"],
+            ["Onlar", "gelecekler", "They will come"]
+          ]
+        }
+      },
+      {
+        "type": "explanation",
+        "content": "Note: When followed by a vowel, the 'k' in -ecek/-acak softens to 'ğ'. Example: gelecek → geleceğim (I will come)."
+      }
+    ],
+    "exercises": [
+      {
+        "type": "conjugation",
+        "verb": "gitmek (to go)",
+        "tense": "Future Tense",
+        "pronouns": ["Ben", "Sen", "O", "Biz", "Siz", "Onlar"],
+        "answers": {
+          "Ben": "gideceğim",
+          "Sen": "gideceksin",
+          "O": "gidecek",
+          "Biz": "gideceğiz",
+          "Siz": "gideceksiniz",
+          "Onlar": "gidecekler"
+        }
+      },
+      {
+        "type": "fill_blank",
+        "sentence": "Yarın okula ___",
+        "answer": "gideceğim",
+        "hint": "I will go to school tomorrow (ben)"
+      },
+      {
+        "type": "sentence_build",
+        "english": "We will eat dinner",
+        "words": ["yiyeceğiz", "akşam", "yemeği", "biz"],
+        "correctOrder": ["biz", "akşam", "yemeği", "yiyeceğiz"]
+      }
+    ]
+  },
+  {
+    "id": "possessives",
+    "title": "Possessive Suffixes",
+    "description": "Express ownership and belonging in Turkish",
+    "difficulty": "intermediate",
+    "sections": [
+      {
+        "type": "explanation",
+        "content": "Turkish expresses possession through suffixes added to the noun. The suffix vowel follows 4-way vowel harmony."
+      },
+      {
+        "type": "table",
+        "content": "Possessive suffixes with 'ev' (house)",
+        "table": {
+          "headers": ["Pronoun", "Suffix", "Example", "English"],
+          "rows": [
+            ["Ben", "-(i)m", "evim", "my house"],
+            ["Sen", "-(i)n", "evin", "your house"],
+            ["O", "-(s)i", "evi", "his/her house"],
+            ["Biz", "-(i)miz", "evimiz", "our house"],
+            ["Siz", "-(i)niz", "eviniz", "your (pl) house"],
+            ["Onlar", "-leri", "evleri", "their house"]
+          ]
+        }
+      },
+      {
+        "type": "example",
+        "content": "More examples",
+        "examples": [
+          { "tr": "kitabım", "en": "my book" },
+          { "tr": "annem", "en": "my mother" },
+          { "tr": "arkadaşımız", "en": "our friend" },
+          { "tr": "arabaları", "en": "their car" }
+        ]
+      }
+    ],
+    "exercises": [
+      {
+        "type": "fill_blank",
+        "sentence": "Benim ___",
+        "answer": "kitabım",
+        "hint": "My book (kitap + possessive)"
+      },
+      {
+        "type": "fill_blank",
+        "sentence": "Senin ___",
+        "answer": "evin",
+        "hint": "Your house (ev + possessive)"
+      },
+      {
+        "type": "fill_blank",
+        "sentence": "Bizim ___",
+        "answer": "arabamız",
+        "hint": "Our car (araba + possessive)"
+      }
+    ]
+  }
+]
