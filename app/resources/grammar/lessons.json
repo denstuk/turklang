@@ -52,6 +52,31 @@
         "answer": "j",
         "alternatives": ["J"],
         "hint": "Think of 'jump'"
+      },
+      {
+        "type": "matching_pairs",
+        "pairs": [
+          { "left": "ç", "right": "ch (church)" },
+          { "left": "ş", "right": "sh (shoe)" },
+          { "left": "ğ", "right": "silent / lengthens vowel" },
+          { "left": "ı", "right": "uh (about)" },
+          { "left": "ö", "right": "ur (burn)" }
+        ],
+        "hint": "Match each Turkish letter to its English sound equivalent"
+      },
+      {
+        "type": "error_correction",
+        "sentence": "Çay in Turkish is pronounced 'kay'.",
+        "errorWord": "kay",
+        "correctWord": "chai",
+        "hint": "ç sounds like 'ch' — how is çay actually pronounced?"
+      },
+      {
+        "type": "multiple_choice",
+        "sentence": "The Turkish letter 'ğ' after a vowel makes the vowel ___ .",
+        "options": ["longer", "shorter", "silent", "doubled"],
+        "correctIndex": 0,
+        "hint": "The yumuşak g (soft g) lengthens the preceding vowel"
       }
     ]
   },
@@ -109,6 +134,37 @@
         "sentence": "kuş + ler/lar → kuş___",
         "answer": "lar",
         "hint": "'u' is a back vowel, so use 'lar'"
+      },
+      {
+        "type": "multiple_choice",
+        "sentence": "Evler___ çok güzel.",
+        "options": ["de", "da", "te", "ta"],
+        "correctIndex": 0,
+        "hint": "'Evler' has front vowel 'e' — locative -de"
+      },
+      {
+        "type": "multiple_choice",
+        "sentence": "Odalar___ büyük.",
+        "options": ["da", "de", "ta", "te"],
+        "correctIndex": 0,
+        "hint": "'Odalar' has back vowel 'a' — locative -da"
+      },
+      {
+        "type": "error_correction",
+        "sentence": "Gözler güzel — plural of 'göz' is gözlar.",
+        "errorWord": "gözlar",
+        "correctWord": "gözler",
+        "hint": "'ö' is a front vowel — which plural suffix do front vowels take?"
+      },
+      {
+        "type": "matching_pairs",
+        "pairs": [
+          { "left": "a, ı, o, u", "right": "back vowels → -lar / -a / -da / -dan" },
+          { "left": "e, i, ö, ü", "right": "front vowels → -ler / -e / -de / -den" },
+          { "left": "ev", "right": "evler (front vowel)" },
+          { "left": "oda", "right": "odalar (back vowel)" }
+        ],
+        "hint": "Match each vowel group to its harmony rule"
       }
     ]
   },
@@ -157,6 +213,31 @@
         "english": "The houses are big",
         "words": ["büyük", "evler"],
         "correctOrder": ["evler", "büyük"]
+      },
+      {
+        "type": "multiple_choice",
+        "sentence": "Arabalar___ garajda.",
+        "options": ["lar", "ler", "ların", "lerin"],
+        "correctIndex": 0,
+        "hint": "'Araba' has back vowel 'a' — plural -lar"
+      },
+      {
+        "type": "error_correction",
+        "sentence": "Çocukler parkta oynuyor.",
+        "errorWord": "Çocukler",
+        "correctWord": "Çocuklar",
+        "hint": "'Çocuk' has back vowel 'u' — which plural suffix?"
+      },
+      {
+        "type": "matching_pairs",
+        "pairs": [
+          { "left": "kedi", "right": "kediler" },
+          { "left": "araba", "right": "arabalar" },
+          { "left": "göz", "right": "gözler" },
+          { "left": "kuş", "right": "kuşlar" },
+          { "left": "çiçek", "right": "çiçekler" }
+        ],
+        "hint": "Match each singular noun to its correct plural form"
       }
     ]
   },
@@ -216,6 +297,31 @@
         "sentence": "O kitap ___",
         "answer": "okuyor",
         "hint": "He/she is reading a book"
+      },
+      {
+        "type": "multiple_choice",
+        "sentence": "Ben şu an müzik ___ .",
+        "options": ["dinliyorum", "dinledin", "dinleyeceğim", "dinlerim"],
+        "correctIndex": 0,
+        "hint": "Action happening right now — present continuous, 1st person"
+      },
+      {
+        "type": "error_correction",
+        "sentence": "Biz okula gidiyorum.",
+        "errorWord": "gidiyorum",
+        "correctWord": "gidiyoruz",
+        "hint": "Subject is 'Biz' (we) — which ending does -yor take for Biz?"
+      },
+      {
+        "type": "matching_pairs",
+        "pairs": [
+          { "left": "Ben", "right": "gidiyorum" },
+          { "left": "Sen", "right": "gidiyorsun" },
+          { "left": "O", "right": "gidiyor" },
+          { "left": "Biz", "right": "gidiyoruz" },
+          { "left": "Onlar", "right": "gidiyorlar" }
+        ],
+        "hint": "Match each pronoun to the correct present continuous form of 'gitmek'"
       }
     ]
   },
@@ -270,6 +376,37 @@
         "english": "Is this a cat?",
         "words": ["mi", "bir", "bu", "kedi"],
         "correctOrder": ["bu", "bir", "kedi", "mi"]
+      },
+      {
+        "type": "multiple_choice",
+        "sentence": "Bu film sıkıcı ___ ?",
+        "options": ["mı", "mi", "mu", "mü"],
+        "correctIndex": 0,
+        "hint": "Last vowel in 'sıkıcı' is 'ı' — use 'mı'"
+      },
+      {
+        "type": "multiple_choice",
+        "sentence": "Sen mutlu ___ ?",
+        "options": ["musun", "misin", "mısın", "müsün"],
+        "correctIndex": 0,
+        "hint": "Last vowel in 'mutlu' is 'u' — use 'musun'"
+      },
+      {
+        "type": "error_correction",
+        "sentence": "Bu güzel mi? — 'güzel' has back vowel so use 'mı'.",
+        "errorWord": "mı",
+        "correctWord": "mi",
+        "hint": "Last vowel in 'güzel' is 'e' (front vowel) — which particle?"
+      },
+      {
+        "type": "matching_pairs",
+        "pairs": [
+          { "left": "güzel (last vowel: e)", "right": "mi" },
+          { "left": "sıcak (last vowel: a)", "right": "mı" },
+          { "left": "soğuk (last vowel: u)", "right": "mu" },
+          { "left": "üzgün (last vowel: ü)", "right": "mü" }
+        ],
+        "hint": "Match each word to its correct question particle"
       }
     ]
   },
@@ -325,6 +462,31 @@
         "english": "She ate the apple",
         "words": ["yedi", "elmayı", "o"],
         "correctOrder": ["o", "elmayı", "yedi"]
+      },
+      {
+        "type": "multiple_choice",
+        "sentence": "Dün biz sinemaya ___ .",
+        "options": ["gittik", "gidiyoruz", "gideceğiz", "gideriz"],
+        "correctIndex": 0,
+        "hint": "Completed past action — Biz subject"
+      },
+      {
+        "type": "error_correction",
+        "sentence": "Ben dün kitap okuyorum.",
+        "errorWord": "okuyorum",
+        "correctWord": "okudum",
+        "hint": "'Dün' (yesterday) signals completed past — which tense?"
+      },
+      {
+        "type": "matching_pairs",
+        "pairs": [
+          { "left": "Ben", "right": "geldim" },
+          { "left": "Sen", "right": "geldin" },
+          { "left": "O", "right": "geldi" },
+          { "left": "Biz", "right": "geldik" },
+          { "left": "Onlar", "right": "geldiler" }
+        ],
+        "hint": "Match each pronoun to the correct past tense form of 'gelmek'"
       }
     ]
   },
@@ -384,6 +546,31 @@
         "english": "We will eat dinner",
         "words": ["yiyeceğiz", "akşam", "yemeği", "biz"],
         "correctOrder": ["biz", "akşam", "yemeği", "yiyeceğiz"]
+      },
+      {
+        "type": "multiple_choice",
+        "sentence": "Onlar yarın tatile ___ .",
+        "options": ["gidecekler", "gidiyorlar", "gittiler", "giderler"],
+        "correctIndex": 0,
+        "hint": "Future plan — Onlar subject"
+      },
+      {
+        "type": "error_correction",
+        "sentence": "Yarın ben okula gidiyorum, bugün değil.",
+        "errorWord": "gidiyorum",
+        "correctWord": "gideceğim",
+        "hint": "'Yarın' (tomorrow) signals future tense"
+      },
+      {
+        "type": "matching_pairs",
+        "pairs": [
+          { "left": "Ben", "right": "gideceğim" },
+          { "left": "Sen", "right": "gideceksin" },
+          { "left": "O", "right": "gidecek" },
+          { "left": "Biz", "right": "gideceğiz" },
+          { "left": "Onlar", "right": "gidecekler" }
+        ],
+        "hint": "Match each pronoun to the correct future form of 'gitmek'"
       }
     ]
   },
@@ -441,6 +628,31 @@
         "sentence": "Bizim ___",
         "answer": "arabamız",
         "hint": "Our car (araba + possessive)"
+      },
+      {
+        "type": "multiple_choice",
+        "sentence": "Benim kitab___ nerede?",
+        "options": ["ım", "im", "um", "üm"],
+        "correctIndex": 0,
+        "hint": "'Kitap' has back vowel 'a' — 1st person possessive -ım"
+      },
+      {
+        "type": "error_correction",
+        "sentence": "Senin evin çok güzel — wait, the word 'evin' is wrong for 'his house'.",
+        "errorWord": "evin",
+        "correctWord": "evi",
+        "hint": "3rd person (his/her) possessive of 'ev' is 'evi', not 'evin'"
+      },
+      {
+        "type": "matching_pairs",
+        "pairs": [
+          { "left": "evim", "right": "my house" },
+          { "left": "evin", "right": "your house" },
+          { "left": "evi", "right": "his/her house" },
+          { "left": "evimiz", "right": "our house" },
+          { "left": "evleri", "right": "their house" }
+        ],
+        "hint": "Match each possessive form to its English meaning"
       }
     ]
   }

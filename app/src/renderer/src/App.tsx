@@ -9,6 +9,7 @@ import QuizPage from '@/components/quiz/QuizPage'
 import TypingPage from '@/components/typing/TypingPage'
 import GrammarPage from '@/components/grammar/GrammarPage'
 import LessonView from '@/components/grammar/LessonView'
+import SentencePracticePage from '@/components/grammar/SentencePracticePage'
 import AudioPage from '@/components/audio/AudioPage'
 import VideoPage from '@/components/video/VideoPage'
 import ProgressPage from '@/components/progress/ProgressPage'
@@ -28,6 +29,7 @@ export default function App() {
             <Route path="/typing" element={<TypingPage />} />
             <Route path="/grammar" element={<GrammarPage />} />
             <Route path="/grammar/:lessonId" element={<LessonView />} />
+            <Route path="/sentences" element={<SentencePracticePage />} />
             <Route path="/audio" element={<AudioPage />} />
             <Route path="/video" element={<VideoPage />} />
             <Route path="/progress" element={<ProgressPage />} />

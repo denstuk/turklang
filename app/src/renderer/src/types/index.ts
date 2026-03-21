@@ -82,7 +82,13 @@ export interface LessonSection {
   table?: { headers: string[]; rows: string[][] }
 }
 
-export type Exercise = FillInBlankExercise | SentenceBuildExercise | ConjugationExercise
+export type Exercise =
+  | FillInBlankExercise
+  | SentenceBuildExercise
+  | ConjugationExercise
+  | MultipleChoiceExercise
+  | ErrorCorrectionExercise
+  | MatchingPairsExercise
 
 export interface FillInBlankExercise {
   type: 'fill_blank'
@@ -105,6 +111,33 @@ export interface ConjugationExercise {
   tense: string
   pronouns: string[]
   answers: Record<string, string>
+}
+
+export interface MultipleChoiceExercise {
+  type: 'multiple_choice'
+  sentence: string
+  options: string[]
+  correctIndex: number
+  hint?: string
+  category?: string
+}
+
+export interface ErrorCorrectionExercise {
+  type: 'error_correction'
+  sentence: string
+  errorWord: string
+  correctWord: string
+  hint?: string
+}
+
+export interface MatchingPairsExercise {
+  type: 'matching_pairs'
+  pairs: { left: string; right: string }[]
+  hint?: string
+}
+
+export interface SentenceExercise extends MultipleChoiceExercise {
+  id: string
 }
 
 export interface VideoLesson {

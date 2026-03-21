@@ -6,6 +6,7 @@ const NAV_ITEMS = [
   { to: '/quiz', label: 'Quiz', icon: '✅' },
   { to: '/typing', label: 'Type Answer', icon: '⌨️' },
   { to: '/grammar', label: 'Grammar', icon: '📖' },
+  { to: '/sentences', label: 'Sentences', icon: '🔤' },
   { to: '/audio', label: 'Audio', icon: '🔊' },
   { to: '/video', label: 'Video', icon: '🎬' },
   { to: '/progress', label: 'Progress', icon: '📈' }

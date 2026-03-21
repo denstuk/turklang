@@ -9,6 +9,7 @@ declare global {
       resetProgress: () => Promise<void>
       getGrammarLessons: () => Promise<unknown>
       getVideoCatalog: () => Promise<unknown>
+      getSentenceExercises: () => Promise<unknown>
     }
   }
 }

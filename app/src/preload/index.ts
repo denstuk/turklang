@@ -6,7 +6,8 @@ const api = {
   saveProgress: (data: unknown) => ipcRenderer.invoke('save-progress', data),
   resetProgress: () => ipcRenderer.invoke('reset-progress'),
   getGrammarLessons: () => ipcRenderer.invoke('get-grammar-lessons'),
-  getVideoCatalog: () => ipcRenderer.invoke('get-video-catalog')
+  getVideoCatalog: () => ipcRenderer.invoke('get-video-catalog'),
+  getSentenceExercises: () => ipcRenderer.invoke('get-sentence-exercises')
 }
 
 contextBridge.exposeInMainWorld('api', api)

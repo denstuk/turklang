@@ -6,6 +6,9 @@ import Button from '@/components/common/Button'
 import FillInBlank from './FillInBlank'
 import SentenceBuilder from './SentenceBuilder'
 import ConjugationDrill from './ConjugationDrill'
+import MultipleChoice from './MultipleChoice'
+import ErrorCorrection from './ErrorCorrection'
+import MatchingPairs from './MatchingPairs'
 
 export default function LessonView() {
   const { lessonId } = useParams()
@@ -163,5 +166,11 @@ function ExerciseRenderer({
       return <SentenceBuilder key={exercise.english} exercise={exercise} onComplete={onComplete} />
     case 'conjugation':
       return <ConjugationDrill key={exercise.verb} exercise={exercise} onComplete={onComplete} />
+    case 'multiple_choice':
+      return <MultipleChoice key={exercise.sentence} exercise={exercise} onComplete={onComplete} />
+    case 'error_correction':
+      return <ErrorCorrection key={exercise.sentence} exercise={exercise} onComplete={onComplete} />
+    case 'matching_pairs':
+      return <MatchingPairs key={exercise.pairs[0]?.left} exercise={exercise} onComplete={onComplete} />
   }
 }

@@ -78,6 +78,12 @@ function registerIPC(): void {
     if (existsSync(p)) return JSON.parse(readFileSync(p, 'utf-8'))
     return []
   })
+
+  ipcMain.handle('get-sentence-exercises', () => {
+    const p = getResourcePath('grammar/sentences.json')
+    if (existsSync(p)) return JSON.parse(readFileSync(p, 'utf-8'))
+    return []
+  })
 }
 
 app.whenReady().then(() => {
