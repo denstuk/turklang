@@ -13,6 +13,7 @@ import SentencePracticePage from '@/components/grammar/SentencePracticePage'
 import AudioPage from '@/components/audio/AudioPage'
 import VideoPage from '@/components/video/VideoPage'
 import ProgressPage from '@/components/progress/ProgressPage'
+import LearnPage from '@/components/learn/LearnPage'
 
 export default function App() {
   const [splashDone, setSplashDone] = useState(false)
@@ -24,6 +25,7 @@ export default function App() {
         <AppShell>
           <Routes>
             <Route path="/" element={<DashboardPage />} />
+            <Route path="/learn" element={<LearnPage />} />
             <Route path="/flashcards" element={<FlashcardsPage />} />
             <Route path="/quiz" element={<QuizPage />} />
             <Route path="/typing" element={<TypingPage />} />

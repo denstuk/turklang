@@ -44,7 +44,7 @@ export interface ProgressData {
   lastActiveDate: string
 }
 
-export type SessionMode = 'flashcards' | 'quiz' | 'typing'
+export type SessionMode = 'flashcards' | 'quiz' | 'typing' | 'learn'
 export type Direction = 'tr_en' | 'en_tr'
 export type Level = 0 | 1 | 2 | 3 | 4 | 5
 

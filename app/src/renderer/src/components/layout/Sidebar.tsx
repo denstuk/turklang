@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 
 const NAV_ITEMS = [
   { to: '/', label: 'Dashboard', icon: '📊' },
+  { to: '/learn', label: 'Learn', icon: '🌱' },
   { to: '/flashcards', label: 'Flashcards', icon: '🃏' },
   { to: '/quiz', label: 'Quiz', icon: '✅' },
   { to: '/typing', label: 'Type Answer', icon: '⌨️' },
