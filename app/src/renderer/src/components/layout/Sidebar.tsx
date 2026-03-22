@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 const NAV_ITEMS = [
   { to: '/', label: 'Dashboard', icon: '📊' },
@@ -36,15 +37,26 @@ export default function Sidebar() {
             to={item.to}
             end={item.to === '/'}
             className={({ isActive }) =>
-              `flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all ${
+              `relative flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-colors ${
                 isActive
-                  ? 'bg-gradient-to-r from-emerald-50 to-cyan-50 text-emerald-700'
-                  : 'text-gray-500 hover:bg-gray-50 hover:text-gray-700'
+                  ? 'text-emerald-700'
+                  : 'text-gray-500 hover:text-gray-700'
               }`
             }
           >
-            <span className="text-base">{item.icon}</span>
-            <span>{item.label}</span>
+            {({ isActive }) => (
+              <>
+                {isActive && (
+                  <motion.div
+                    layoutId="sidebar-active"
+                    className="absolute inset-0 rounded-xl bg-gradient-to-r from-emerald-50 to-cyan-50"
+                    transition={{ type: 'spring', stiffness: 400, damping: 35 }}
+                  />
+                )}
+                <span className="relative text-base">{item.icon}</span>
+                <span className="relative">{item.label}</span>
+              </>
+            )}
           </NavLink>
         ))}
       </nav>

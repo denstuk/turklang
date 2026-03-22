@@ -1,5 +1,7 @@
 import { useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import PageTransition from '@/components/common/PageTransition'
 import {
   AreaChart,
   Area,
@@ -12,11 +14,12 @@ import {
   Cell
 } from 'recharts'
 import { useProgress } from '@/hooks/useProgress'
-import { Level, LEVEL_NAMES, LEVEL_COLORS } from '@/types'
+import { Level, LEVEL_NAMES, LEVEL_COLORS, Word, WordProgress } from '@/types'
 import { allWordsFlat } from '@/data/words'
 import Card from '@/components/common/Card'
 import Button from '@/components/common/Button'
 import LevelBadge from '@/components/common/LevelBadge'
+import SpeakButton from '@/components/shared/SpeakButton'
 
 export default function DashboardPage() {
   const { progress, words } = useProgress()
@@ -39,11 +42,15 @@ export default function DashboardPage() {
       color: LEVEL_COLORS[Number(level) as Level]
     }))
 
-    const weakWords = wordEntries.length > 0
+    const wordMap = new Map<string, Word>(
+      words ? allWordsFlat(words).map((w) => [w.id, w]) : []
+    )
+    const weakWords: { word: Word; wp: WordProgress }[] = wordEntries.length > 0
       ? Object.entries(progress.words)
-          .filter(([, w]) => w.seen > 0 && w.level < 4)
+          .filter(([id, w]) => w.seen > 0 && w.level < 4 && wordMap.has(id))
           .sort((a, b) => a[1].level - b[1].level || b[1].incorrect - a[1].incorrect)
           .slice(0, 5)
+          .map(([id, wp]) => ({ word: wordMap.get(id)!, wp }))
       : []
 
     const activityMap: Record<string, number> = {}
@@ -63,11 +70,18 @@ export default function DashboardPage() {
   const circumference = 2 * Math.PI * 45
   const offset = circumference - (pct / 100) * circumference
 
+  const fadeUp = (delay: number) => ({
+    initial: { opacity: 0, y: 16 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.35, delay, ease: 'easeOut' }
+  })
+
   return (
+    <PageTransition>
     <div>
       <h2 className="text-2xl font-bold text-gray-800 mb-6">Dashboard</h2>
 
-      <div className="grid grid-cols-3 gap-4 mb-6">
+      <motion.div className="grid grid-cols-3 gap-4 mb-6" {...fadeUp(0.05)}>
         {/* Overall Progress Ring */}
         <Card className="p-6 col-span-2">
           <div className="flex items-center gap-8">
@@ -121,9 +135,9 @@ export default function DashboardPage() {
             </p>
           </div>
         </Card>
-      </div>
+      </motion.div>
 
-      <div className="grid grid-cols-2 gap-4 mb-6">
+      <motion.div className="grid grid-cols-2 gap-4 mb-6" {...fadeUp(0.12)}>
         {/* Activity Chart */}
         <Card className="p-6" gradient="from-blue-400 to-purple-400">
           <h3 className="text-sm font-medium text-gray-500 mb-4">Activity (Last 14 Days)</h3>
@@ -175,18 +189,24 @@ export default function DashboardPage() {
             </BarChart>
           </ResponsiveContainer>
         </Card>
-      </div>
+      </motion.div>
 
-      <div className="grid grid-cols-2 gap-4">
+      <motion.div className="grid grid-cols-2 gap-4" {...fadeUp(0.2)}>
         {/* Weak Words */}
         <Card className="p-6" gradient="from-red-400 to-orange-400">
           <h3 className="text-sm font-medium text-gray-500 mb-4">Words to Practice</h3>
           {stats.weakWords.length > 0 ? (
             <div className="space-y-2">
-              {stats.weakWords.map(([id, wp]) => (
-                <div key={id} className="flex items-center justify-between py-1">
-                  <span className="text-sm font-medium text-gray-700">{id}</span>
-                  <div className="flex items-center gap-2">
+              {stats.weakWords.map(({ word, wp }) => (
+                <div key={word.id} className="flex items-center justify-between py-1">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <SpeakButton text={word.tr} size="sm" />
+                    <div className="min-w-0">
+                      <p className="text-sm font-medium text-gray-700 truncate">{word.tr}</p>
+                      <p className="text-xs text-gray-400 truncate">{word.en}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2 shrink-0 ml-2">
                     <span className="text-xs text-gray-400">
                       {wp.correct}/{wp.seen}
                     </span>
@@ -234,7 +254,8 @@ export default function DashboardPage() {
             </Button>
           </div>
         </Card>
-      </div>
+      </motion.div>
     </div>
+    </PageTransition>
   )
 }

@@ -1,5 +1,6 @@
 import { useEffect, useState, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import PageTransition from '@/components/common/PageTransition'
 import { SentenceExercise } from '@/types'
 import Card from '@/components/common/Card'
 import Button from '@/components/common/Button'
@@ -78,6 +79,7 @@ export default function SentencePracticePage() {
 
   if (phase === 'config') {
     return (
+      <PageTransition>
       <div className="max-w-xl mx-auto mt-6">
         <h2 className="text-2xl font-bold text-gray-800 mb-1">Sentence Practice</h2>
         <p className="text-sm text-gray-400 mb-8">
@@ -131,6 +133,7 @@ export default function SentencePracticePage() {
           {allExercises.length === 0 ? 'Loading…' : 'Start Practice'}
         </Button>
       </div>
+      </PageTransition>
     )
   }
 

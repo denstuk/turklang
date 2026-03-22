@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Direction, WordsData } from '@/types'
 import Button from '@/components/common/Button'
 import Card from '@/components/common/Card'
+import PageTransition from '@/components/common/PageTransition'
 
 interface SessionConfigProps {
   words: WordsData
@@ -19,6 +20,7 @@ export default function SessionConfig({ words, onStart, title }: SessionConfigPr
   const categories = Object.entries(words.categories)
 
   return (
+    <PageTransition>
     <div className="max-w-xl mx-auto mt-8">
       <h2 className="text-2xl font-bold text-gray-800 mb-6">{title}</h2>
 
@@ -98,5 +100,6 @@ export default function SessionConfig({ words, onStart, title }: SessionConfigPr
         </Button>
       </Card>
     </div>
+    </PageTransition>
   )
 }

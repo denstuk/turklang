@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { motion } from 'framer-motion'
 import { GrammarLesson } from '@/types'
 import Card from '@/components/common/Card'
+import PageTransition from '@/components/common/PageTransition'
 
 const DIFFICULTY_COLORS = {
   beginner: { bg: 'bg-emerald-50', text: 'text-emerald-600' },
@@ -24,37 +26,46 @@ export default function GrammarPage() {
   }, [])
 
   return (
-    <div>
-      <h2 className="text-2xl font-bold text-gray-800 mb-2">Grammar Lessons</h2>
-      <p className="text-sm text-gray-400 mb-6">Interactive Turkish grammar exercises</p>
+    <PageTransition>
+      <div>
+        <h2 className="text-2xl font-bold text-gray-800 mb-2">Grammar Lessons</h2>
+        <p className="text-sm text-gray-400 mb-6">Interactive Turkish grammar exercises</p>
 
-      <div className="grid grid-cols-2 gap-4">
-        {lessons.map((lesson) => {
-          const dc = DIFFICULTY_COLORS[lesson.difficulty]
-          return (
-            <Card
-              key={lesson.id}
-              gradient={DIFFICULTY_GRADIENTS[lesson.difficulty]}
-              className="p-5 cursor-pointer hover:shadow-md transition-shadow"
-            >
-              <div onClick={() => navigate(`/grammar/${lesson.id}`)}>
-                <div className="flex items-center gap-2 mb-2">
-                  <span
-                    className={`px-2 py-0.5 rounded-full text-xs font-medium ${dc.bg} ${dc.text}`}
-                  >
-                    {lesson.difficulty}
-                  </span>
-                  <span className="text-xs text-gray-400">
-                    {lesson.exercises.length} exercises
-                  </span>
-                </div>
-                <h3 className="text-base font-bold text-gray-800 mb-1">{lesson.title}</h3>
-                <p className="text-sm text-gray-500">{lesson.description}</p>
-              </div>
-            </Card>
-          )
-        })}
+        <div className="grid grid-cols-2 gap-4">
+          {lessons.map((lesson, i) => {
+            const dc = DIFFICULTY_COLORS[lesson.difficulty]
+            return (
+              <motion.div
+                key={lesson.id}
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: i * 0.06, ease: 'easeOut' }}
+              >
+                <Card
+                  gradient={DIFFICULTY_GRADIENTS[lesson.difficulty]}
+                  className="p-5 cursor-pointer hover:shadow-md transition-shadow"
+                  hoverable
+                >
+                  <div onClick={() => navigate(`/grammar/${lesson.id}`)}>
+                    <div className="flex items-center gap-2 mb-2">
+                      <span
+                        className={`px-2 py-0.5 rounded-full text-xs font-medium ${dc.bg} ${dc.text}`}
+                      >
+                        {lesson.difficulty}
+                      </span>
+                      <span className="text-xs text-gray-400">
+                        {lesson.exercises.length} exercises
+                      </span>
+                    </div>
+                    <h3 className="text-base font-bold text-gray-800 mb-1">{lesson.title}</h3>
+                    <p className="text-sm text-gray-500">{lesson.description}</p>
+                  </div>
+                </Card>
+              </motion.div>
+            )
+          })}
+        </div>
       </div>
-    </div>
+    </PageTransition>
   )
 }

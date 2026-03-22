@@ -13,7 +13,7 @@ export default function SpeakButton({ text, className = '', size = 'md' }: Speak
 
   return (
     <button
-      onClick={() => speak(text)}
+      onClick={(e) => { e.stopPropagation(); speak(text) }}
       className={`rounded-full bg-gradient-to-r from-emerald-50 to-cyan-50 hover:from-emerald-100 hover:to-cyan-100 flex items-center justify-center transition-all ${SIZES[size]} ${className}`}
       title="Listen"
     >

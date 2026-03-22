@@ -1,4 +1,6 @@
 import { useMemo } from 'react'
+import { motion } from 'framer-motion'
+import PageTransition from '@/components/common/PageTransition'
 import {
   LineChart,
   Line,
@@ -72,7 +74,14 @@ export default function ProgressPage() {
 
   if (!stats) return null
 
+  const fadeUp = (delay: number) => ({
+    initial: { opacity: 0, y: 16 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.35, delay, ease: 'easeOut' }
+  })
+
   return (
+    <PageTransition>
     <div>
       <h2 className="text-2xl font-bold text-gray-800 mb-6">Progress</h2>
 
@@ -83,11 +92,13 @@ export default function ProgressPage() {
           { label: 'Seen', value: stats.totalSeen, color: 'text-blue-500' },
           { label: 'Mastered', value: stats.totalKnown, color: 'text-emerald-500' },
           { label: 'Avg Accuracy', value: `${stats.avgAccuracy}%`, color: 'text-purple-500' }
-        ].map((s) => (
-          <Card key={s.label} className="p-4 text-center">
+        ].map((s, i) => (
+          <motion.div key={s.label} {...fadeUp(i * 0.06)}>
+          <Card className="p-4 text-center">
             <p className={`text-2xl font-bold ${s.color}`}>{s.value}</p>
             <p className="text-xs text-gray-400">{s.label}</p>
           </Card>
+          </motion.div>
         ))}
       </div>
 
@@ -200,5 +211,6 @@ export default function ProgressPage() {
         </Card>
       )}
     </div>
+    </PageTransition>
   )
 }

@@ -1,6 +1,7 @@
 import { ButtonHTMLAttributes } from 'react'
+import { motion, HTMLMotionProps } from 'framer-motion'
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends HTMLMotionProps<'button'> {
   variant?: 'primary' | 'secondary' | 'ghost'
   size?: 'sm' | 'md' | 'lg'
 }
@@ -26,12 +27,16 @@ export default function Button({
   children,
   ...props
 }: ButtonProps) {
+  const isInteractive = variant !== 'ghost'
   return (
-    <button
+    <motion.button
+      whileHover={isInteractive ? { scale: 1.02 } : undefined}
+      whileTap={isInteractive ? { scale: 0.97 } : undefined}
+      transition={{ duration: 0.15 }}
       className={`rounded-xl font-medium transition-all ${VARIANTS[variant]} ${SIZES[size]} ${className}`}
       {...props}
     >
       {children}
-    </button>
+    </motion.button>
   )
 }

@@ -1,5 +1,6 @@
 import { useState, useRef, useCallback } from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
+import PageTransition from '@/components/common/PageTransition'
 import { useProgress } from '@/hooks/useProgress'
 import { Direction, Word, SessionMode } from '@/types'
 import { allWordsFlat } from '@/data/words'
@@ -74,6 +75,7 @@ export default function FlashcardsPage() {
   const showHints = direction === 'tr_en'
 
   return (
+    <PageTransition>
     <div className="max-w-xl mx-auto mt-8">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-xl font-bold text-gray-800">Flashcards</h2>
@@ -82,6 +84,14 @@ export default function FlashcardsPage() {
         </span>
       </div>
 
+      <AnimatePresence mode="wait">
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, x: 30 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: -30 }}
+        transition={{ duration: 0.2 }}
+      >
       <div className="perspective-[800px] mb-6">
         <motion.div
           className="relative w-full h-64 cursor-pointer"
@@ -113,6 +123,8 @@ export default function FlashcardsPage() {
           </div>
         </motion.div>
       </div>
+      </motion.div>
+      </AnimatePresence>
 
       {flipped && (
         <motion.div
@@ -140,5 +152,6 @@ export default function FlashcardsPage() {
         duration={Math.round((Date.now() - startTime.current) / 1000)}
       />
     </div>
+    </PageTransition>
   )
 }
